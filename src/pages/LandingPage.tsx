@@ -26,21 +26,21 @@ export default function LandingPage(){
             duration: 1.4
         });
 
-        tl.set([gosteRef,subtituloRef.current], {
+        tl.set([gosteRef.current,subtituloRef.current], {
             opacity: 1,
         });
 
         tl.to(subtituloRef.current, {
         duration: 5,
-        text: "nossos devs da desgraça da silva corporation™ generarão um pedido de despedida para vossa alteza.",
+        text: "Nossos devs da desgraça da silva corporation™ generarão um pedido de despedida para vossa alteza.",
         ease: "none",
       }, "+=0.3");
 
       tl.to(gosteRef.current, {
-        duration: 5,
+        duration: 1,
         text: "Esperemos que goste :)",
         ease: "none",
-      }, "+=0.3");
+      }, "+=1.3");
     })
     return(
         <section className={style.header}>
@@ -51,16 +51,24 @@ export default function LandingPage(){
             <h2>
                 <span
                 ref={subtituloRef}
-                className="block"
+                className={style.subtitulo}
               />
             </h2>
 
             <h2>
                 <span
                 ref={gosteRef}
-                className="block"
+                className={style.subtitulo}
               />
             </h2>
+
+            <div className={style.cardsContainer}>
+                <div className={style.cardDev}></div>
+                <div className={style.cardDev}></div>
+                <div className={style.cardDev}></div>
+                <div className={style.cardDev}></div>
+                <div className={style.cardDev}></div>
+            </div>
         </section>
     )
 }//Emilie Corpão Da Silva Silva Mariah Santos Silva
